@@ -11,13 +11,13 @@
     <string name="string_hint">提示</string>
     <string name="string_other">其他功能演示</string>
     <string name="string_notify">跨域通知</string>
-    <string name="string_bottm_meun">底部菜单</string>
+    <string name="string_bottom_meun">底部菜单</string>
     <string name="string_msg_dialog">消息对话框</string>
     <string name="string_select_msg_dialog">选择对话框</string>
     <string name="string_input_msg_dialog">输入对话框</string>
     <string name="string_wait_msg_hint">等待对话框</string>
     <string name="string_wait_msg_dialog">等待对话框</string>
-    <string name="string_wait_msg_dialog_hint">等待+提示对话框</string>
+    <string name="string_wait_msg_dialog_hint">等待 + 提示对话框</string>
     <string name="string_modal_msg_dialog">序列化对话框</string>
     <string name="string_break_msg_dialog">显示Dialog时关闭Activity</string>
     <string name="string_notify_msg_dialog">显示跨域通知</string>
