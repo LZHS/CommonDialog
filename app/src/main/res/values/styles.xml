@@ -1,11 +1,47 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+    <style name="ViewTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextTitleTheme" parent="ViewTheme">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">15sp</item>
+    </style>
+
+    <style name="TextNomeTheme" parent="ViewTheme">
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:paddingHorizontal" tools:targetApi="o">15dp</item>
+        <item name="android:paddingVertical" tools:targetApi="o">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/rect_button</item>
+    </style>
+
+
+    <style name="RadioTheme" parent="ViewTheme">
+        <item name="android:textColor">@color/colorRadioText</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <color name="colorText">#dc000000</color>
+    <color name="colorRadioText">#7b000000</color>
 </resources>

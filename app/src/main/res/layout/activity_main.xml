@@ -7,13 +7,276 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mTitleBar"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:background="@color/colorPrimaryDark"
+            android:clickable="true"
+            android:layout_height="?attr/actionBarSize">
+
+        <TextView
+                android:text="标题栏"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mTextTitle"
+                android:textColor="#dc000000"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        <ImageView
+                android:id="@+id/mImgShare"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:src="@mipmap/img_share"
+                android:contentDescription="TODO"/>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_alignParentBottom="true"
+                android:background="#a6a8a9"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:id="@+id/mSmartRefresh"
+            app:layout_constraintTop_toBottomOf="@id/mTitleBar"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <TextView
+                        style="@style/TextTitleTheme"
+                        android:text="@string/string_style"/>
+
+                <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="5dp"
+                        android:orientation="horizontal">
+
+                    <RadioButton
+                            android:id="@+id/mRadioiOS"
+                            android:checked="true"
+                            android:text="@string/string_ios"
+                            style="@style/RadioTheme"/>
+
+                    <RadioButton
+                            android:id="@+id/mRadioMaterial"
+                            android:text="@string/string_material"
+                            style="@style/RadioTheme"/>
+
+                    <RadioButton
+                            android:id="@+id/mRadioKongZue"
+                            android:text="@string/string_kongzue"
+                            style="@style/RadioTheme"/>
+                </RadioGroup>
+
+                <TextView
+                        style="@style/TextTitleTheme"
+                        android:text="@string/string_theme"/>
+
+                <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="5dp"
+                        android:orientation="horizontal">
+
+                    <RadioButton
+                            android:id="@+id/mRadioLight"
+                            android:checked="true"
+                            android:text="@string/string_light"
+                            style="@style/RadioTheme"/>
+
+                    <RadioButton
+                            android:id="@+id/mRadioDark"
+                            android:text="@string/string_dark"
+                            style="@style/RadioTheme"/>
+                </RadioGroup>
+
+
+                <TextView
+                        style="@style/TextTitleTheme"
+                        android:text="@string/string_dialog"/>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        style="@style/ViewTheme">
+
+
+                    <TextView
+                            android:id="@+id/mTextMsgDialog"
+                            style="@style/TextNomeTheme"
+                            android:text="@string/string_msg_dialog"/>
+
+                    <TextView
+                            android:id="@+id/mTextSelectMsgDialog"
+                            style="@style/TextNomeTheme"
+                            android:text="@string/string_select_msg_dialog"/>
+
+                    <TextView
+                            android:id="@+id/mTextInputMsgDialog"
+                            style="@style/TextNomeTheme"
+                            android:text="@string/string_input_msg_dialog"/>
+
+                </LinearLayout>
+
+                <TextView
+                        style="@style/TextTitleTheme"
+                        android:text="@string/string_hint"/>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:id="@+id/mTextWaitMsgDialog"
+                            style="@style/TextNomeTheme"
+                            android:text="@string/string_wait_msg_dialog"/>
+                    <TextView
+                            android:id="@+id/mTextWaitMsgDialogHint"
+                            style="@style/TextNomeTheme"
+                            android:text="@string/string_wait_msg_dialog_hint"/>
+                </LinearLayout>
+
+                <TextView
+                        style="@style/TextTitleTheme"
+                        android:text="@string/string_other"/>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:id="@+id/mTextModalMsgDialog"
+                            style="@style/TextNomeTheme"
+                            android:text="@string/string_modal_msg_dialog"/>
+
+                    <TextView
+                            android:id="@+id/mTextBreakMsgDialog"
+                            style="@style/TextNomeTheme"
+                            android:text="@string/string_break_msg_dialog"/>
+                </LinearLayout>
+
+                <TextView
+                        style="@style/TextTitleTheme"
+                        android:text="@string/string_notify"/>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:id="@+id/mTextNotifyMsgDialog"
+                            style="@style/TextNomeTheme"
+                            android:text="@string/string_notify_msg_dialog"/>
+                </LinearLayout>
+
+                <TextView
+                        style="@style/TextTitleTheme"
+                        android:text="@string/string_bottm_meun"/>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:id="@+id/mTextBottomMsgDialog"
+                            style="@style/TextNomeTheme"
+                            android:text="@string/string_bottom_msg_dialog"/>
+
+                    <TextView
+                            android:id="@+id/mTextBottomMenuWithTitleMsgDialog"
+                            style="@style/TextNomeTheme"
+                            android:text="@string/string_bottom_menu_with_title_msg_dialog"/>
+
+                    <TextView
+                            android:id="@+id/mTextBottomShareMsgDialog"
+                            style="@style/TextNomeTheme"
+                            android:text="@string/string_bottom_share_msg_dialog"/>
+
+                </LinearLayout>
+
+                <TextView
+                        style="@style/TextTitleTheme"
+                        android:text="@string/string_custom_layout"/>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:id="@+id/mTextCustomMsgDialog"
+                            style="@style/TextNomeTheme"
+                            android:text="@string/string_custom_msg_dialog"/>
+
+                    <TextView
+                            android:id="@+id/mTextCustomInputMsgDialog"
+                            style="@style/TextNomeTheme"
+                            android:text="@string/string_custom_input_msg_dialog"/>
+
+                    <TextView
+                            android:id="@+id/mTextCustomBottomMenuMsgDialog"
+                            style="@style/TextNomeTheme"
+                            android:text="@string/string_custom_bottom_menu_msg_dialog"/>
+
+                    <TextView
+                            android:id="@+id/mTextCustomNotifyMsgDialog"
+                            style="@style/TextNomeTheme"
+                            android:text="@string/string_custom_notify_msg_dialog"/>
+
+                </LinearLayout>
+
+                <TextView
+                        style="@style/TextTitleTheme"
+                        android:text="@string/string_custom_dialog"/>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:id="@+id/mTextCustomDialog"
+                            style="@style/TextNomeTheme"
+                            android:text="@string/string_custom_dialog"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
