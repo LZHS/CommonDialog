@@ -47,27 +47,27 @@ class DialogSetting {
         /**
          * 全局输入框文本样式
          */
-        lateinit var inputInfo:InputInfo
+        lateinit var inputInfo: InputInfo
 
         /**
-         * 全局对话框背景颜色，值0时不生效
+         * 全局对话框背景颜色，值-1时不生效
          */
-        var backgroundColor=0
+        var backgroundColor = -1
 
         /**
          * 全局对话框默认是否可以点击外围遮罩区域或返回键关闭，此开关不影响提示框（TipDialog）以及等待框（TipDialog）
          */
-        var cancelable=false
+        var cancelable = false
 
         /**
          * 全局提示框及等待框（WaitDialog、TipDialog）默认是否可以关闭
          */
-        var cancelableTipDialog=false
+        var cancelableTipDialog = false
 
         /**
          * 模糊透明度(0~255)
          */
-        var blurAlpha=210
+        var blurAlpha = 210
 
         /**
          * 允许自定义系统对话框style，注意设置此功能会导致原对话框风格和动画失效
@@ -77,7 +77,7 @@ class DialogSetting {
         /**
          * 全局Dialog生命周期监听器
          */
-        var dialogLifeCycleListener:DialogLifeCycleListener? = null
+        var dialogLifeCycleListener: DialogLifeCycleListener? = null
     }
 
 

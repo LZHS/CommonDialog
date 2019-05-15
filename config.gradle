@@ -2,7 +2,7 @@ ext {
     android = [
             compileSdkVersion           : 28,
             applicationId               : "com.example.commondialog",
-            minSdkVersion               : 15,
+            minSdkVersion               : 19,
             targetSdkVersion            : 28,
             versionCode                 : 1,
             versionName                 : "v1.0.0",
